@@ -1,0 +1,803 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+* {
+  margin: 0px;
+  padding: auto;
+  font-family: 'Encode Sans SC', sans-serif;
+}
+
+html,body
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    background-color: #1B1B1B;
+}
+
+/* HEADER AND NAV BAR ====================================================== */
+
+#header {
+  display: flex;
+  flex: 0 2 0;
+  justify-content: space-around;
+  background-color: #3c78a9;
+  width: 100%;
+  height: 120px;
+  color: white;
+  border-bottom: 3px solid #1B1B1B;
+}
+
+#logo,
+#solarPanelImg {
+  height: 110px;
+  padding-top: 5px;
+}
+
+
+
+#logo {
+  padding-left: 5px;
+}
+
+#header > h1 {
+  white-space: nowrap;
+  padding-top: 40px;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 2px;
+  transition: transform .2s;
+}
+
+#header > h1:hover {
+  transform: scale(1.2);
+}
+
+#navBar {
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background-color: #3c78a9;
+}
+
+#btnContainer {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.navBtn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 26px;
+  transition: transform .2s;
+}
+
+.navBtn:hover{
+  transform: scale(1.1);
+}
+
+.active {
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+
+/*  HOME AND ABOUT US =================================================================== */
+
+#aboutUsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+#aboutUsInfo{
+  width: 90%;
+  margin: auto;
+  font-weight: 400;
+}
+
+#aboutUsImg{
+  width: 50%;
+}
+
+#aboutUsInfo > p {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#homeInfo{
+  padding-top: 100px;
+  text-align: center;
+}
+
+#homeInfo > h1 {
+  display: felx;
+  align-items: center;
+  padding-top: 250px;
+  overflow: hidden;
+  color: white;
+  font-weight: 700;
+  font-size: 80px;
+}
+#homeInfo > h1:hover
+{
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+#homeContent {
+  position: relative;
+  background-image: url("img/solarPlants.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#homeInfo{
+  background-color: rgba(0, 0, 0, 0.40);
+  height: 100vh;
+}
+
+#logoBackground {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translate(-50%, 5%);
+}
+
+/* CALCULATOR============================================================ */
+
+#calculatorContainer {
+  display: none;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  color: black;
+  background: transparent;
+}
+
+#calculatorHeaderContainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+#calculatorHeaderText{
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#calculatorHeaderContainer > img{
+  width: 5%;
+}
+
+#calculatorContainer > h2{
+  color: white;
+  text-align: center;
+  padding-top: 3%;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+#generateYears{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#generateAnnualYears, #calculateBtn, #popUpCloseBtn{
+  background: transparent;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 1.5em;
+  color: #57A4BC;
+}
+
+
+.close{
+  border-radius: 5px;
+}
+
+/* CALCULATOR NAVIGATION BUTTONS STYLE */
+
+.mainBtns{
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: white;
+}
+
+.subBtnNext{
+  background: transparent;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 1.5em;
+  color: #103C25;
+}
+
+.subBtnPrev{
+  background: transparent;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 1.5em;
+  color: #6F0000;
+}
+
+
+/* CALCULATOR RADIO BUTTONS STYLE */
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -3px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -3px;
+  position: relative;
+  background-color: #3c78a9;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.radio-inline:hover{
+color: #3c78a9;
+}
+
+
+.radio-inline,.radio-inline > input{
+  display: inline;
+  width: auto;
+}
+
+#calculateBtn{
+  display: none;
+}
+
+/* FOOTER ===================================================================== */
+
+
+
+#footer{
+  border-top: 2px solid #1B1B1B;
+  border-bottom: 2px solid #1B1B1B;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background-color: #3c78a9;
+  text-align: center;
+}
+
+#footer > small{
+  color: white;
+}
+
+#contactUsImg{
+  height: 75%;
+  display: block;
+  margin: auto;
+}
+
+input{
+  border-radius: 10px;
+}
+
+/* POPUP ========================================== */
+.modal-content{
+  background-color: #1B1B1B;
+  color: white;
+}
+
+#popUpCloseBtn-X{
+  background-color: inherit;
+  border: 2px solid #57A4BC;
+  color: #57A4BC;
+}
+
+
+
+/* Style the form */
+#regForm {
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.50) ;
+  color: white;
+  width: 90%;
+  border-radius: 10px;
+  margin: 100px auto;
+  padding: 40px;
+  min-width: 300px;
+}
+
+#formButtons{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#deductionFormButtons, .annualValuesYears {
+  margin-bottom: 20px;
+}
+
+#deductionFormButtons, #taxFormButtons, #annualValuesButtons{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#annualValuesSteps{
+  margin-top: 20px;
+}
+
+.deductionStep, .taxStep , .annualValuesStep{
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+Input::-webkit-input-placeholder{
+  font-family: 'Bebas Neue', cursive;
+}
+
+label{
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+.deductionActive , .taxActive, .annualStepActive{
+  opacity: 1;
+}
+
+#taxCreditsNone{
+  display: none;
+}
+
+div[class="tab"] > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#annualValuesButtons{
+  overflow: auto;
+  /* display: none; */
+}
+
+#deleteAnnualValueStep, #annualValuesDynamicContainerNone{
+  display: none;
+}
+
+.placeholderError::-webkit-input-placeholder {
+  color: darkred;
+}
+
+.annualValuesYears{
+  text-align: center;
+}
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+.directTaxIncentivesDiv{
+  display: none;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+
+
+
+
+
+
+/* RESPONSIVENESS =============================== */
+
+/* 
+
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV
+
+*/
+
+@media screen and (max-width: 1024px) {
+  #homeInfo > h1 {
+    padding-top: 450px;
+  }
+
+    #logoBackground {
+    padding-top: 140px;
+  }
+
+  #aboutUsInfo > p {
+    font-size: 17px;
+  }
+
+  #header > h1 {
+    font-size: 40px;
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  #homeInfo > h1 {
+    padding-top: 250px;
+    font-size: 50px;
+  }
+
+    #logoBackground {
+    width: 250px;
+    padding-top: 20px;
+
+  }
+
+  #aboutUsInfo > p {
+    font-size: 15px;
+  }
+
+  #header > h1 {
+    font-size: 35px;
+  }
+  #logo,
+  #solarPanelImg {
+  height: 95px;
+  padding-top: 20px;
+}
+#header {
+  height: 100px;
+}
+
+#navBar {
+  height: 32px;
+}
+
+.navBtn {
+  font-size: 20px;
+}
+
+#footer{
+  height: 90px;
+}
+
+input::placeholder {
+  font-size: 13px;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  #homeInfo > h1 {
+    padding-top: 250px;
+    font-size: 40px;
+  }
+
+
+  #aboutUsInfo > p {
+    font-size: 12px;
+  }
+
+  #header > h1 {
+    font-size: 30px;
+  }
+
+  #logo,
+  #solarPanelImg {
+  height: 80px;
+  padding-top: 18px;
+}
+#footer{
+  height: 80px;
+}
+
+#footer > small{
+  font-size: 12px;
+}
+
+#contactUsImg{
+  height: 70%;
+}
+input::placeholder {
+  font-size: 12px;
+}
+
+
+}
+
+@media screen and (max-width: 576px) {
+  input::placeholder {
+    font-size: 15px;
+  }
+
+  #homeInfo > h1 {
+    font-size: 35px;
+  }
+
+  #homeInfo > h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+#aboutUsInfo > p {
+  font-size: 10px;
+}
+
+#header > h1 {
+  font-size: 18px;
+}
+
+  #logo,
+  #solarPanelImg {
+  height: 70px;
+  padding-top: 18px;
+}
+
+#header {
+  height: 80px;
+  border-bottom: 2px solid #1B1B1B;
+}
+
+#navBar {
+  height: 28px;
+  text-align: center;
+}
+
+.navBtn {
+  font-size: 18px;
+}
+
+#btnContainer {
+  text-align: center;
+}
+#footer{
+  height: 70px;
+  border-top: 1px solid #1B1B1B;
+  border-bottom: 1px solid #1B1B1B;
+}
+
+#footer > small{
+  font-size: 10px;
+}
+
+#contactUsImg{
+  height: 65%;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 380px) {
+
+#homeInfo > h1 {
+  padding-top: 300px;
+  font-size: 30px;
+}
+
+  #logoBackground {
+  padding-top: 100px;
+  width: 200px;
+}
+
+
+#header {
+  height: 75px;
+}
+
+#header > h1 {
+  padding-top: 35px;
+}
+
+  #logo,
+  #solarPanelImg {
+  height: 55px;
+  padding-top: 18px;
+}
+#footer{
+  height: 60px;
+}
+#footer > small{
+  font-size: 7px;
+}
+
+#contactUsImg{
+  height: 60%;
+}
+
+}
+
+
+@media screen and (max-width: 380px) {
+  #aboutUsInfo > p {
+    font-size: 8px;
+  }
+  
+  #header > h1 {
+    font-size: 18px;
+  }
+
+  #homeInfo > h1 {
+    padding-top: 200px;
+  }
+  
+    #logoBackground {
+    padding-top: 30px;
+  }
+
+  #footer{
+    height: 50px;
+  }
+  #footer > small{
+    font-size: 6px;
+  }
+  
+  #contactUsImg{
+    height: 55%;
+  }
+}

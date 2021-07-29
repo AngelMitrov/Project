@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar-Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="img/solarDataLogo1.png" alt="Logo" id="logo">
+        <h1> SOLAR PLANTS FEASIBILITY </h1>
+        <img src="img/solarEnergy.png" alt="solarPanel" id="solarPanelImg">
+    </div>
+    <div id="navBar">
+        <div id="btnContainer">
+            <button class="navBtn" id="homeBtn"> HOME </button>
+            <button class="navBtn" id="calculator"> CALCULATOR </button>
+        </div>
+    </div>
+    <div id="homeContent">
+        <div id="homeInfo">
+            <img src="img/solarDataLogo1.png" alt="backgroundLogo" id="logoBackground">
+            <h1>THE SUN IS POWER!</h1>
+        </div>
+    </div>
+    <div id="aboutUsContainer">
+        <img src="img/aboutUs.png" alt="aboutUs" id="aboutUsImg">
+        <div id="aboutUsInfo">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a ipsam hic
+                laboriosam,
+                consequatur, dolorem odio minima atque distinctio quaerat amet. Eaque, veritatis
+                soluta!
+                Dicta
+                quae
+                eligendi quam, aliquam aliquid sint officiis in quisquam nostrum soluta aut
+                quibusdam
+                voluptatibus!
+                Voluptatibus, ullam dolorem id cumque error blanditiis architecto ratione modi
+                eos quam
+                praesentium,
+                reiciendis quidem ex commodi? Voluptas qui amet veniam aspernatur itaque facilis
+                culpa eos
+                sapiente
+                nulla eum. Explicabo rerum unde quae itaque, nobis eaque dignissimos consequatur
+                id tempore
+                placeat.
+                Autem veniam eveniet blanditiis sit repellendus tempora ea et recusandae laborum
+                ipsa amet
+                voluptate, esse sint perspiciatis aperiam ducimus natus. Lorem ipsum dolor sit,
+                amet
+                consectetur
+                adipisicing elit. Culpa consequatur neque tempora magni.
+                Explicabo rerum unde quae itaque, nobis eaque dignissimos consequatur
+                id tempore placeat.
+                Autem veniam eveniet blanditiis sit repellendus tempora ea et recusandae laborum
+                ipsa amet
+                voluptate, esse sint perspiciatis aperiam ducimus natus. Lorem ipsum dolor sit,
+                amet
+                consectetur
+                adipisicing elit. Culpa consequatur neque tempora magni.
+            </p>
+        </div>
+    </div>
+    <div id="calculatorContainer">
+        <div id="stepperCalculatorContainer">
+            <form id="regForm" action="">
+                <div id="calculatorHeaderContainer">
+                    <img src="img/calculatorImg.png" alt="">
+                    <h1 id="calculatorHeaderText">CALCULATOR</h1>
+                    <img src="img/solarPanel.png" alt="">
+                </div>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <h2>System Costs</h2>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <!-- <label for="installedCost">Total Installed Cost ($)</label> -->
+                            <input type="number" name="installedCost" id="" placeholder="Total Installed Cost ($)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Operation and Maintenance (O&M)</h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="number" name="AnnualOM" id="" placeholder="Fixed (Annual) O&M ($/yr)">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="number" name="EscRate1" id="" placeholder="Escalation Rate (%/yr)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="number" name="FixedOM" id="" placeholder="Fixed O&M ($/kW-yr)">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="number" name="EscRate2" id="" placeholder="Escalation Rate (%/yr)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="number" name="VariableOM" id="" placeholder="Variable O&M ($/MWh)">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="number" name="EscRate3" id="" placeholder="Escalation Rate (%/yr)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="number" name="batteryReplacements" id="" placeholder="Bettery Replacements">
+                        </div>
+                    </div>
+                    <br>
+                    <h4>Fuel</h4>
+                    <h5>CSP, generic system</h5>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="AnnualFuelUsage" id="" placeholder="Annual Fuel Usage (kWh)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="heatRate" id="" placeholder="Heat rate,generic only (MMBTU/MWh)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="fuelCost" id="" placeholder="Fuel cost ($/MMBtu)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="EscRate4" id="" placeholder="Escalation Rate (%/year)">
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Biomass power</h5>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="biomassUsage" id=""
+                                placeholder="Annual biomass feedstock usage(dry ton)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="biomassCost" id=""
+                                placeholder="Biomass feedstock cost($/dry ton)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="biomassEscRate" id="" placeholder="Escalation Rate(%/year)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="coalUsage" id="" placeholder="Coal feedstock usage(dry ton)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="coalCost" id="" placeholder="Coal feedstock cost($/dry ton)">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" name="coalEscRate" id="" placeholder="Escalation Rate(%/year)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Loan Parameters</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="debtFraction" id=""
+                                placeholder="Debt Fraction(% of total installed cost)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="loanTerm" id="" placeholder="Loan Term(years)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="loanRate" id="" placeholder="Loan Rate(%/year)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Analysis Parameters</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="analysisPeriod" id="" placeholder="Analysis Period(years)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="inflationRate" id="" placeholder="Inflation Rate(%/year)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="number" name="realDiscRate" id="" placeholder="Real Discount Rate(%/year)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class=" row">
+                        <div class="col-sm-4">
+                            <input type="number" name="nominalDiscRate" id=""
+                                placeholder="Nominal Discount Rate(%/year)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Tax and Insurance Rates</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="federalTaxRate" id=""
+                                placeholder="Federal income tax rate in Year 1 (%)">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="number" name="stateTaxRate" id=""
+                                placeholder="State income tax rate in Year 1 (%)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="salesTax" id="" placeholder="Sales tax (% of direct costs)">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="number" name="insuranceRate" id="" placeholder="Insurance rate (%/year)">
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Property Tax (%/year)</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="assessedPercentage" id=""
+                                placeholder="Assessed percentage(% of total installed cost)">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="number" name="assessedValue" id="" placeholder="Assessed value ($)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="annualDecline" id="" placeholder="Annual decline (%/year)">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="number" name="propertyTax" id=""
+                                placeholder="Property tax rate(% of assessed value)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Salvage Value</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="number" name="netSalvageValue" id=""
+                                placeholder="Net Salvage Value(% of total installed cost)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Tax Credits</h2>
+                    <div class="taxCreditsDiv">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Investment Tax Credit</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Reduces depreciation and ITC basis</h>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h5> As fixed amount</h5>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6>Federal ($)</h6>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="number" name="fAmmount" id="" placeholder="Ammount">
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2" class="radio-inline">
+                                <label for="federal1">Federal</label>
+                                <br>
+                                <label for="federal1" class="radio-inline">Yes
+                                    <input type="radio" name="federal1" id="" class="radio">
+                                </label>
+                                <br>
+                                <label for="federal1" class="radio-inline">No
+                                    <input type="radio" name="federal1" id="" class="radio">
+                                </label>
+                            </div>
+                            <div class="col-sm-2" class="radio-inline">
+                                <label for="state1">State</label>
+                                <br>
+                                <label for="state1" class="radio-inline">Yes
+                                    <input type="radio" name="state1" id="">
+                                </label>
+                                <br>
+                                <label for="state1" class="radio-inline">No
+                                    <input type="radio" name="state1" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6>State ($)</h6>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="number" name="sAmmount" id="" placeholder="Ammount">
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2">
+                                <label for="federal2">Federal</label>
+                                <br>
+                                <label for="federal2" class="radio-inline">Yes
+                                    <input type="radio" name="federal2" id="">
+                                </label>
+                                <br>
+                                <label for="federal2" class="radio-inline">No
+                                    <input type="radio" name="federal2" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state2">State</label>
+                                <br>
+                                <label for="state2" class="radio-inline">Yes
+                                    <input type="radio" name="state2" id="">
+                                </label>
+                                <br>
+                                <label for="state2" class="radio-inline">No
+                                    <input type="radio" name="state2" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h5> As percentage </h5>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6> Federal </h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="fPerc" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="number" name="fMax" id="" placeholder="Maximum">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="federal3">Federal</label>
+                                <br>
+                                <label for="federal3" class="radio-inline">Yes
+                                    <input type="radio" name="federal3" id="">
+                                </label>
+                                <br>
+                                <label for="federal3" class="radio-inline">No
+                                    <input type="radio" name="federal3" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state3">State</label>
+                                <br>
+                                <label for="state3" class="radio-inline">Yes
+                                    <input type="radio" name="state3" id="">
+                                </label>
+                                <br>
+                                <label for="state3" class="radio-inline">No
+                                    <input type="radio" name="state3" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6> State </h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="sPerc" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="number" name="sMax" id="" placeholder="Maximum">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="federal4">Federal</label>
+                                <br>
+                                <label for="federal4" class="radio-inline">Yes
+                                    <input type="radio" name="federal4" id="">
+                                </label>
+                                <br>
+                                <label for="federal4" class="radio-inline">No
+                                    <input type="radio" name="federal4" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state4">State</label>
+                                <br>
+                                <label for="state4" class="radio-inline">Yes
+                                    <input type="radio" name="state4" id="">
+                                </label>
+                                <br>
+                                <label for="state4" class="radio-inline">No
+                                    <input type="radio" name="state4" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="taxCreditsDiv" id="taxCreditsNone">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4>Preduction tax credit (PTC)</h4>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6>Federal ($/kWh)</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" name="federalAmmount" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" name="federalTerm" id="" placeholder="Term($/Years)">
+                            </div>
+                            <div class=" col-md-3">
+                                <input type="number" name="federalEscalation" id="" placeholder="Escalation(%)">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6>State ($/kWh)</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" name="stateAmmount" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" name="stateTerm" id="" placeholder="Term($/Years)">
+                            </div>
+                            <div class=" col-md-3">
+                                <input type="number" name="stateEscalation" id="" placeholder="Escalation(%)">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CODE============ -->
+                    <div style="overflow:auto;">
+                        <div id="taxFormButtons">
+                            <button type="button" class="subBtnPrev" id="prevTaxBtn"
+                                onclick="taxNextPrev(-1)">Previous</button>
+                            <button type="button" class="subBtnNext" id="nextTaxBtn"
+                                onclick="taxNextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    <div style="text-align:center;margin-top:20px;">
+                        <span class="taxStep"></span>
+                        <span class="taxStep"></span>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <h2>Direct Tax Incentives</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 id="directTaxIncentivesHeader">
+                                Investment based incentive (IBI)
+                            </h4>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5 class="directTaxIncentivesSubHeaders"> Incentive is taxable </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5 class="directTaxIncentivesSubHeaders"> Reduces depreciation and ITC basis</h5>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="directTaxIncentivesDiv">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h5>As fixed ammount</h5>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Federal ($)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="federalAmm1" id="" placeholder="Ammount($)">
+                            </div>
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-1">
+                                <label for="federal5">Federal</label>
+                                <br>
+                                <label for="federal5" class="radio-inline">Yes
+                                    <input type="radio" name="federal5" id="">
+                                </label>
+                                <br>
+                                <label for="federal5" class="radio-inline">No
+                                    <input type="radio" name="federal5" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state5">State</label>
+                                <br>
+                                <label for="state5" class="radio-inline">Yes
+                                    <input type="radio" name="state5" id="">
+                                </label>
+                                <br>
+                                <label for="state5" class="radio-inline">No
+                                    <input type="radio" name="state5" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal6">Federal</label>
+                                <br>
+                                <label for="federal6" class="radio-inline">Yes
+                                    <input type="radio" name="federal6" id="">
+                                </label>
+                                <br>
+                                <label for="federal6" class="radio-inline">No
+                                    <input type="radio" name="federal6" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state6">State</label>
+                                <br>
+                                <label for="state6" class="radio-inline">Yes
+                                    <input type="radio" name="state6" id="">
+                                </label>
+                                <br>
+                                <label for="state6" class="radio-inline">No
+                                    <input type="radio" name="state6" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>State ($)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="stateAmm1" id="" placeholder="Ammount($)">
+                            </div>
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-1">
+                                <label for="federal7">Federal</label>
+                                <br>
+                                <label for="federal7" class="radio-inline">Yes
+                                    <input type="radio" name="federal7" id="">
+                                </label>
+                                <br>
+                                <label for="federal7" class="radio-inline">No
+                                    <input type="radio" name="federal7" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state7">State</label>
+                                <br>
+                                <label for="state7" class="radio-inline">Yes
+                                    <input type="radio" name="state7" id="">
+                                </label>
+                                <br>
+                                <label for="state7" class="radio-inline">No
+                                    <input type="radio" name="state7" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal8">Federal</label>
+                                <br>
+                                <label for="federal8" class="radio-inline">Yes
+                                    <input type="radio" name="federal8" id="">
+                                </label>
+                                <br>
+                                <label for="federal8" class="radio-inline">No
+                                    <input type="radio" name="federal8" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state8">State</label>
+                                <br>
+                                <label for="state8" class="radio-inline">Yes
+                                    <input type="radio" name="state8" id="">
+                                </label>
+                                <br>
+                                <label for="state8" class="radio-inline">No
+                                    <input type="radio" name="state8" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Utility ($)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="utilityAmm1" id="" placeholder="Ammount($)">
+                            </div>
+                            <div class=" col-sm-2">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal9">Federal</label>
+                                <br>
+                                <label for="federal9" class="radio-inline">Yes
+                                    <input type="radio" name="federal9" id="">
+                                </label>
+                                <br>
+                                <label for="federal9" class="radio-inline">No
+                                    <input type="radio" name="federal9" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state9">State</label>
+                                <br>
+                                <label for="state9" class="radio-inline">Yes
+                                    <input type="radio" name="state9" id="">
+                                </label>
+                                <br>
+                                <label for="state9" class="radio-inline">No
+                                    <input type="radio" name="state9" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal10">Federal</label>
+                                <br>
+                                <label for="federal10" class="radio-inline">Yes
+                                    <input type="radio" name="federal10" id="">
+                                </label>
+                                <br>
+                                <label for="federal10" class="radio-inline">No
+                                    <input type="radio" name="federal10" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state10">State</label>
+                                <br>
+                                <label for="state10" class="radio-inline">Yes
+                                    <input type="radio" name="state10" id="">
+                                </label>
+                                <br>
+                                <label for="state10" class="radio-inline">No
+                                    <input type="radio" name="state10" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Other ($)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" name="otherAmm1" id="" placeholder="Ammount($)">
+                            </div>
+                            <div class=" col-sm-2">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal11">Federal</label>
+                                <br>
+                                <label for="federal11" class="radio-inline">Yes
+                                    <input type="radio" name="federal11" id="">
+                                </label>
+                                <br>
+                                <label for="federal11" class="radio-inline">No
+                                    <input type="radio" name="federal11" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state11">State</label>
+                                <br>
+                                <label for="state11" class="radio-inline">Yes
+                                    <input type="radio" name="state11" id="">
+                                </label>
+                                <br>
+                                <label for="state11" class="radio-inline">No
+                                    <input type="radio" name="state11" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal12">Federal</label>
+                                <br>
+                                <label for="federal12" class="radio-inline">Yes
+                                    <input type="radio" name="federal12" id="">
+                                </label>
+                                <br>
+                                <label for="federal12" class="radio-inline">No
+                                    <input type="radio" name="federal12" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state12">State</label>
+                                <br>
+                                <label for="state12" class="radio-inline">Yes
+                                    <input type="radio" name="state12" id="">
+                                </label>
+                                <br>
+                                <label for="state12" class="radio-inline">No
+                                    <input type="radio" name="state12" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="directTaxIncentivesDiv">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>As percentage</h5>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Federal (% of total installed cost)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="percentage1" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal13">Federal</label>
+                                <br>
+                                <label for="federal13" class="radio-inline">Yes
+                                    <input type="radio" name="federal13" id="">
+                                </label>
+                                <br>
+                                <label for="federal13" class="radio-inline">No
+                                    <input type="radio" name="federal13" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state13">State</label>
+                                <br>
+                                <label for="state13" class="radio-inline">Yes
+                                    <input type="radio" name="state13" id="">
+                                </label>
+                                <br>
+                                <label for="state13" class="radio-inline">No
+                                    <input type="radio" name="state13" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal14">Federal</label>
+                                <br>
+                                <label for="federal14" class="radio-inline">Yes
+                                    <input type="radio" name="federal14" id="">
+                                </label>
+                                <br>
+                                <label for="federal14" class="radio-inline">No
+                                    <input type="radio" name="federal14" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state14">State</label>
+                                <br>
+                                <label for="state14" class="radio-inline">Yes
+                                    <input type="radio" name="state14" id="">
+                                </label>
+                                <br>
+                                <label for="state14" class="radio-inline">No
+                                    <input type="radio" name="state14" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>State (% of total installed cost)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="percentage2" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm1" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal14">Federal</label>
+                                <br>
+                                <label for="federal14" class="radio-inline">Yes
+                                    <input type="radio" name="federal14" id="">
+                                </label>
+                                <br>
+                                <label for="federal14" class="radio-inline">No 
+                                    <input type="radio" name="federal14" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state14">State</label>
+                                <br>
+                                <label for="state14" class="radio-inline">Yes
+                                    <input type="radio" name="state14" id="">
+                                </label>
+                                <br>
+                                <label for="state14" class="radio-inline">No 
+                                    <input type="radio" name="state14" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal15">Federal</label>
+                                <br>
+                                <label for="federal15" class="radio-inline">Yes
+                                    <input type="radio" name="federal15" id="">
+                                </label>
+                                <br>
+                                <label for="federal15" class="radio-inline">No 
+                                    <input type="radio" name="federal15" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state15">State</label>
+                                <br>
+                                <label for="state15" class="radio-inline">Yes
+                                    <input type="radio" name="state15" id="">
+                                </label>
+                                <br>
+                                <label for="state15" class="radio-inline">No 
+                                    <input type="radio" name="state15" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Utility (% of total installed cost)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="percentage3" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm2" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal15">Federal</label>
+                                <br>
+                                <label for="federal15" class="radio-inline">Yes
+                                    <input type="radio" name="federal15" id="">
+                                </label>
+                                <br>
+                                <label for="federal15" class="radio-inline">No
+                                    <input type="radio" name="federal15" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state15">State</label>
+                                <br>
+                                <label for="state15" class="radio-inline">Yes
+                                    <input type="radio" name="state15" id="">
+                                </label>
+                                <br>
+                                <label for="state15" class="radio-inline">No
+                                    <input type="radio" name="state15" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal16">Federal</label>
+                                <br>
+                                <label for="federal16" class="radio-inline">Yes
+                                    <input type="radio" name="federal16" id="">
+                                </label>
+                                <br>
+                                <label for="federal16" class="radio-inline">No
+                                    <input type="radio" name="federal16" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state16">State</label>
+                                <br>
+                                <label for="state16" class="radio-inline">Yes
+                                    <input type="radio" name="state16" id="">
+                                </label>
+                                <br>
+                                <label for="state16" class="radio-inline">No
+                                    <input type="radio" name="state16" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Other (% of total installed cost)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="percentage3" id="" placeholder="%">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm3" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal17">Federal</label>
+                                <br>
+                                <label for="federal17" class="radio-inline">Yes
+                                    <input type="radio" name="federal17" id="">
+                                </label>
+                                <br>
+                                <label for="federal17" class="radio-inline">No
+                                    <input type="radio" name="federal17" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state17">State</label>
+                                <br>
+                                <label for="state17" class="radio-inline">Yes
+                                    <input type="radio" name="state17" id="">
+                                </label>
+                                <br>
+                                <label for="state17" class="radio-inline">No
+                                    <input type="radio" name="state17" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal18">Federal</label>
+                                <br>
+                                <label for="federal18" class="radio-inline">Yes
+                                    <input type="radio" name="federal18" id="">
+                                </label>
+                                <br>
+                                <label for="federal18" class="radio-inline">No
+                                    <input type="radio" name="federal18" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state18">State</label>
+                                <br>
+                                <label for="state18" class="radio-inline">Yes
+                                    <input type="radio" name="state18" id="">
+                                </label>
+                                <br>
+                                <label for="state18" class="radio-inline">No
+                                    <input type="radio" name="state18" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="directTaxIncentivesDiv">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Federal ($/W)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="fAmm1" id="" placeholder="Ammount($/W)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm4" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal19">Federal</label>
+                                <br>
+                                <label for="federal19" class="radio-inline">Yes
+                                    <input type="radio" name="federal19" id="">
+                                </label>
+                                <br>
+                                <label for="federal19" class="radio-inline">No
+                                    <input type="radio" name="federal19" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state19">State</label>
+                                <br>
+                                <label for="state19" class="radio-inline">Yes
+                                    <input type="radio" name="state19" id="">
+                                </label>
+                                <br>
+                                <label for="state19" class="radio-inline">No
+                                    <input type="radio" name="state19" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal20">Federal</label>
+                                <br>
+                                <label for="federal20" class="radio-inline">Yes
+                                    <input type="radio" name="federal20" id="">
+                                </label>
+                                <br>
+                                <label for="federal20" class="radio-inline">No
+                                    <input type="radio" name="federal20" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state20">State</label>
+                                <br>
+                                <label for="state20" class="radio-inline">Yes
+                                    <input type="radio" name="state20" id="">
+                                </label>
+                                <br>
+                                <label for="state20" class="radio-inline">No
+                                    <input type="radio" name="state20" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>State ($/W)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="sAmm1" id="" placeholder="Ammount($/W)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm5" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal21">Federal</label>
+                                <br>
+                                <label for="federal21" class="radio-inline">Yes
+                                    <input type="radio" name="federal21" id="">
+                                </label>
+                                <br>
+                                <label for="federal21" class="radio-inline">No
+                                    <input type="radio" name="federal21" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state21">State</label>
+                                <br>
+                                <label for="state21" class="radio-inline">Yes
+                                    <input type="radio" name="state21" id="">
+                                </label>
+                                <br>
+                                <label for="state21" class="radio-inline">No
+                                    <input type="radio" name="state21" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal22">Federal</label>
+                                <br>
+                                <label for="federal22" class="radio-inline">Yes
+                                    <input type="radio" name="federal22" id="">
+                                </label>
+                                <br>
+                                <label for="federal22" class="radio-inline">No
+                                    <input type="radio" name="federal22" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state22">State</label>
+                                <br>
+                                <label for="state22" class="radio-inline">Yes
+                                    <input type="radio" name="state22" id="">
+                                </label>
+                                <br>
+                                <label for="state22" class="radio-inline">No
+                                    <input type="radio" name="state22" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Utility ($/W)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="uAmm1" id="" placeholder="Ammount($/W)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm6" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal23">Federal</label>
+                                <br>
+                                <label for="federal23" class="radio-inline">Yes
+                                    <input type="radio" name="federal23" id="">
+                                </label>
+                                <br>
+                                <label for="federal23" class="radio-inline">No
+                                    <input type="radio" name="federal23" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state23">State</label>
+                                <br>
+                                <label for="state23" class="radio-inline">Yes
+                                    <input type="radio" name="state23" id="">
+                                </label>
+                                <br>
+                                <label for="state23" class="radio-inline">No
+                                    <input type="radio" name="state23" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal24">Federal</label>
+                                <br>
+                                <label for="federal24" class="radio-inline">Yes
+                                    <input type="radio" name="federal24" id="">
+                                </label>
+                                <br>
+                                <label for="federal24" class="radio-inline">No
+                                    <input type="radio" name="federal24" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state24">State</label>
+                                <br>
+                                <label for="state24" class="radio-inline">Yes
+                                    <input type="radio" name="state24" id="">
+                                </label>
+                                <br>
+                                <label for="state24" class="radio-inline">No
+                                    <input type="radio" name="state24" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Other ($/W)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="oAmm1" id="" placeholder="Ammount($/W)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="maxAmm7" id="" placeholder="Maximum($)">
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal25">Federal</label>
+                                <br>
+                                <label for="federal25" class="radio-inline">Yes
+                                    <input type="radio" name="federal25" id="">
+                                </label>
+                                <br>
+                                <label for="federal25" class="radio-inline">No
+                                    <input type="radio" name="federal25" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="state25">State</label>
+                                <br>
+                                <label for="state25" class="radio-inline">Yes
+                                    <input type="radio" name="state25" id="">
+                                </label>
+                                <br>
+                                <label for="state25" class="radio-inline">No
+                                    <input type="radio" name="state25" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="federal26">Federal</label>
+                                <br>
+                                <label for="federal26" class="radio-inline">Yes
+                                    <input type="radio" name="federal26" id="">
+                                </label>
+                                <br>
+                                <label for="federal26" class="radio-inline">No
+                                    <input type="radio" name="federal26" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <label for="state26">State</label>
+                                <br>
+                                <label for="state26" class="radio-inline">Yes
+                                    <input type="radio" name="state26" id="">
+                                </label>
+                                <br>
+                                <label for="state26" class="radio-inline">No
+                                    <input type="radio" name="state26" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="directTaxIncentivesDiv">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Federal ($/kWh)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="fAmm2" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="fTerm1" id="" placeholder="Term(years)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="escRate5" id="" placeholder="Escalation(%/year)">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="fTaxable">Federal taxable</label>
+                                <br>
+                                <label for="fTaxable" class="radio-inline">Yes
+                                    <input type="radio" name="fTaxable" id="">
+                                </label>
+                                <br>
+                                <label for="fTaxable" class="radio-inline">No
+                                    <input type="radio" name="fTaxable" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="stateTaxable">State taxable</label>
+                                <br>
+                                <label for="stateTaxable" class="radio-inline">Yes
+                                    <input type="radio" name="stateTaxable" id="">
+                                </label>
+                                <br>
+                                <label for="stateTaxable" class="radio-inline">No
+                                    <input type="radio" name="stateTaxable" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>State ($/kWh)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="sAmm2" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="sTerm1" id="" placeholder="Term(years)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="escRate6" id="" placeholder="Escalation(%/year)">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="fTaxable1">Federal taxable</label>
+                                <br>
+                                <label for="fTaxable1" class="radio-inline">Yes
+                                    <input type="radio" name="fTaxable1" id="">
+                                </label>
+                                <br>
+                                <label for="fTaxable1" class="radio-inline">No
+                                    <input type="radio" name="fTaxable1" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="stateTaxable1">State taxable</label>
+                                <br>
+                                <label for="stateTaxable1" class="radio-inline">Yes
+                                    <input type="radio" name="stateTaxable1" id="">
+                                </label>
+                                <br>
+                                <label for="stateTaxable1" class="radio-inline">No
+                                    <input type="radio" name="stateTaxable1" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Utility ($/kWh)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="uAmm2" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="uTerm1" id="" placeholder="Term(years)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="escRate7" id="" placeholder="Escalation(%/year)">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="fTaxable2">Federal taxable</label>
+                                <br>
+                                <label for="fTaxable2" class="radio-inline">Yes
+                                    <input type="radio" name="fTaxable2" id="">
+                                </label>
+                                <br>
+                                <label for="fTaxable2" class="radio-inline">No
+                                    <input type="radio" name="fTaxable2" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="stateTaxable2">State taxable</label>
+                                <br>
+                                <label for="stateTaxable2" class="radio-inline">Yes
+                                    <input type="radio" name="stateTaxable2" id="">
+                                </label>
+                                <br>
+                                <label for="stateTaxable2" class="radio-inline">No
+                                    <input type="radio" name="stateTaxable2" id="">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h6>Other ($/kWh)</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="oAmm2" id="" placeholder="Ammount($/kWh)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="oTerm1" id="" placeholder="Term(years)">
+                            </div>
+                            <div class="col-sm-2">
+                                <br>
+                                <input type="number" name="escRate8" id="" placeholder="Escalation(%/year)">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="fTaxable3">Federal taxable</label>
+                                <br>
+                                <label for="fTaxable3" class="radio-inline">Yes
+                                    <input type="radio" name="fTaxable3" id="">
+                                </label>
+                                <br>
+                                <label for="fTaxable3" class="radio-inline">No
+                                    <input type="radio" name="fTaxable3" id="">
+                                </label>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="stateTaxable3">State taxable</label>
+                                <br>
+                                <label for="stateTaxable3" class="radio-inline">Yes
+                                    <input type="radio" name="stateTaxable3" id="">
+                                </label>
+                                <br>
+                                <label for="stateTaxable3" class="radio-inline">No
+                                    <input type="radio" name="stateTaxable3" id="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="overflow:auto;">
+                        <div id="deductionFormButtons">
+                            <button type="button" class="subBtnPrev" id="prevDeductionBtn"
+                                onclick="deductionNextPrev(-1)">Previous</button>
+                            <button type="button" class="subBtnNext" id="nextDeductionBtn"
+                                onclick="deductionNextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    <div style="text-align:center;">
+                        <span class="deductionStep"></span>
+                        <span class="deductionStep"></span>
+                        <span class="deductionStep"></span>
+                        <span class="deductionStep"></span>
+                    </div>
+                </div>
+                <div class="tab">
+                    <h2>Depreciation and Debt Interest Deduction</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <input type="number" name="depreciationFederal" id=""
+                                placeholder="Federal (N/A for residental">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="number" name="depreciationState" id=""
+                                placeholder="State (N/A for residental)">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="taxDeductable">Tax deductable debt interest?</label>
+                            <br>
+                            <label for="taxDeductable" class="radio-inline">Yes
+                                <input type="radio" name="taxDeductable" id="">
+                            </label>
+                            <br>
+                            <label for="taxDeductable" class="radio-inline">No
+                                <input type="radio" name="taxDeductable" id="">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <h2>Annual Values</h2>
+                    <div id="generateYears">
+                        <input type="number" name="yearsForAnnualValues" id="yearsForAnnualValues"
+                            placeholder="Insert the ammount of years to generate inputs">
+                        <br>
+                        <br>
+                        <button id="generateAnnualYears">Generate</button>
+                    </div>
+                    <div id="annualValues">
+                        <div class="annualValuesDynamicContainer" id="annualValuesDynamicContainerNone"></div>
+                    </div>
+                    <div style="overflow:auto;">
+                        <div id="annualValuesButtons">
+                            <button type="button" class="subBtnPrev" id="prevAnnualBtn" onclick="annualValuesNextPrev(-1)">Previous</button>
+                            <button type="button" class="subBtnNext" id="nextAnnualBtn" onclick="annualValuesNextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    <div style="text-align: center;" id="annualValuesSteps">
+                        <span class="annualValuesStep" id="deleteAnnualValueStep"></span>
+                    </div>
+                </div>
+                <div style="overflow:auto;">
+                    <div id="formButtons">
+                        <button type="button" class="mainBtns" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" class="mainBtns" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        <button type="button" id="calculateBtn">Calculate</button>
+
+                    </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+            </form>
+            <div class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Calculator results</h5>
+                      <button type="button" id="popUpCloseBtn-X" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Soon..</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btnClose" id="popUpCloseBtn" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <img src="img/contactUs.png" alt="contactUsImg" id="contactUsImg">
+        <small>&#169; 2021 cp04-sda. All Rights Reserved. </small>
+    </div>
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</html>
